@@ -1,0 +1,234 @@
+/* ===== Darker Gradient Background ===== */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(-45deg, #1a1a40, #24359f, #4a00e0, #2c3e50);
+  background-size: 400% 400%;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  animation: gradientShift 12s ease infinite;
+  margin: 0;
+}
+
+/* ===== Glassmorphism Form Container ===== */
+.form-container {
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 40px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0px 8px 25px rgba(0,0,0,0.5);
+  animation: floatUp 1.2s ease-in-out;
+  position: relative;
+}
+
+/* ===== Heading ===== */
+.form-container h2 {
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 600;
+  animation: fadeIn 1.5s ease-in-out;
+  text-shadow: 0px 2px 5px rgba(0,0,0,0.5);
+}
+
+/* General styles used in both login & signup */
+/* Remove or replace this line with actual styles if needed */
+
+/* Add specific styles for button if needed */
+
+/* Signup page specific */
+.password-hint {
+  margin-top: -5px;
+  margin-bottom: 12px;
+  font-size: 12px;
+  color: #ff4b2b;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+.password-wrapper {
+  position: relative;
+  width: 81%; /* Same width as the email input */
+  margin: 12px auto;
+  right:8.2%;
+}
+
+.password-wrapper input {
+  width: 100%; /* Full width for the input */
+  padding: 12px; /* Same padding as the email input */
+  border-radius: 8px; /* Same border radius */
+  background: rgba(255, 255, 255, 0.15); /* Same background as other inputs */
+  color: #ffffff;
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.3);
+  border: none;
+  outline: none;
+  font-size: 15px; /* Same font size as the email input */
+  padding-right: 40px; /* Space for the eye icon */
+}
+
+.password-wrapper .eye-icon {
+  position: absolute;
+  left:110%;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px; /* Adjusted size to match the input */
+  color: #fff;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.password-wrapper .eye-icon:hover {
+  opacity: 1;
+}
+
+/* Hint styling */
+.password-hint {
+  margin-top: -5px;
+  margin-bottom: 12px;
+  font-size: 12px;
+  color: #ff4b2b;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+.password-hint.valid {
+  color: #4caf50;
+}
+
+/* ===== Input Fields ===== */
+input {
+  width: 90%;
+  padding: 12px;
+  margin: 12px 0;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  box-shadow: inset 0px 2px 5px rgba(0,0,0,0.3);
+}
+
+input::placeholder {
+  color: #ddd;
+}
+
+/* ===== Buttons ===== */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #ff7eb3, #ff758c, #ff4b2b);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 20px rgba(255, 100, 100, 0.5);
+}
+
+/* ===== Links ===== */
+p {
+  margin-top: 15px;
+  color: #eee;
+  font-size: 14px;
+}
+
+a {
+  color: #ffdf6b;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Animations ===== */
+@keyframes floatUp {
+  from {opacity: 0; transform: translateY(50px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Dashboard styles */
+.dashboard-container {
+  max-width: 700px;
+  margin: 50px auto;
+  text-align: center;
+  color: #fff;
+}
+
+.dashboard-container h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-shadow: 0px 3px 8px rgba(0,0,0,0.6);
+}
+
+.dashboard-container p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px 0;
+  text-align: left;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.4);
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+.card button {
+  margin: 8px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: linear-gradient(90deg, #66a6ff, #89f7fe);
+  color: #fff;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+.card button:hover {
+  transform: scale(1.05);
+}
+
+.logout-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: #ff4b2b;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background: #ff1e00;
+}
